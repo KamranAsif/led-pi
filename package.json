@@ -10,19 +10,22 @@
   "license": "Apache-2.0",
   "keywords": [],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "check": "gts check",
     "clean": "gts clean",
     "compile": "tsc",
     "fix": "gts fix",
+    "lint": "gts check",
+    "posttest": "npm run lint",
     "prepare": "npm run compile",
     "pretest": "npm run compile",
-    "posttest": "npm run check",
-      "watch": "tsc --watch"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "tsc --watch"
   },
   "devDependencies": {
     "gts": "^2.0.2",
     "typescript": "^3.8.3",
     "@types/node": "^13.11.1"
+  },
+  "dependencies": {
+    "rxjs": "^6.6.2"
   }
 }
